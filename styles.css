@@ -1,0 +1,126 @@
+head {
+    display: none;
+}
+html, body {
+    font-family: "Roboto", sans-serif;
+    color: #222831;
+    background-color:#EEEEEE;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+nav {
+    display: block;
+}
+#navbar {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    border-right: 2px solid #31363F;
+}
+#navbar header {
+    margin: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+#navbar ul {
+    min-height: 80%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+#navbar li {
+    color: #31363F;
+    border-top: 1px solid #31363F;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    display: list-item;
+}
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #31363F;
+    text-decoration: none;
+    cursor: pointer;
+}
+#navbar a:hover {
+    color: #787A91;
+}
+main {
+    display: block;
+}
+#main-doc {
+    position: absolute;
+    margin-left: 300px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+#main-doc header {
+    text-align: left;
+    margin: 5px 5px 0px 0px;
+    font-size: 25px;
+    font-weight: 400;
+}
+section .article {
+    margin: 15px;
+    font-size: 15px;
+    color: #31363F;
+    line-height: 1.5;
+}
+.article h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+.article .bold {
+    font-weight: bold;
+}
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #222831;
+    color:#EEEEEE;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    width: 60%;
+}
+@media only screen and (max-width: 769px)
+{
+    #navbar {
+        position: absolute;
+        top: 10px;
+        padding: 0;
+        margin: 0 120px;
+        width: 100%;
+        max-width: 250px;
+        border: none;
+        z-index: 1;
+        align-items: center;
+        text-align: center;
+    }
+    #main-doc {
+        margin-left: -10px;
+        position: relative;
+        margin-top: 400px;
+        width: 430px;
+    }
+    #main-doc header {
+        text-align: center;
+        width: 430px;
+        font-weight: 500;
+    }
+    code {
+        width: 80%;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Application Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Weather Forecast Application Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#introducton">Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#application_overview">Application Overview</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#technologies_used">Technologies Used</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#testing_and_validation">Testing and Validation</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#conclusion">Conclusion</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introducton">
+            <header>Introduction</header>
+            <div class="article">
+                <p>Welcome to the Weather Forecast Application Documentation! This documentation serves as a comprehensive guide to understanding the development and functionality of the Weather Forecast Application.</p>
+                <p>Whether you're a developer looking to integrate weather data into your projects or a user interested in exploring weather forecasts, this document will provide valuable insights into the application's features and implementation.</p>
+            </div>
+        </section>
+        <section class="main-section" id="application_overview">
+            <header>Application Overview</header>
+            <div class="article">
+                <p>The Weather Forecast Application provides users with up-to-date weather information for their desired locations. It utilizes weather APIs to fetch real-time data and presents it in an intuitive and user-friendly interface.</p>
+                <p>The application offers features such as current weather conditions, hourly forecasts, and extended forecasts for multiple days.</p>
+            </div>
+        </section>
+        <section class="main-section" id="technologies_used">
+            <header>Technologies Used</header>
+            <div class="article">
+                <h2>Frontend Technologies</h2>
+                <p>Frontend technologies used</p>
+            <ul>
+                <li><span class="bold">HTML5:</span> Used for structuring the application's layout and content.
+                    <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Weather Forecast Application&lt;/title&gt;
+                            &lt;link rel="stylesheet" href="styles.css"&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;!-- Application content --&gt;
+                            &lt;script src="script.js"&gt;&lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </li>
+                <li><span class="bold">CSS3:</span> Provides styling and visual enhancements to the user interface.
+                    <code>
+                        /* styles.css */
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f0f0f0;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    </code>
+                </li>
+                <li><span class="bold">JavaScript:</span> Implements interactivity and dynamic behavior within the application.
+                    <code>
+                        // script.js
+                        // JavaScript code samples is included in the section below.
+                    </code>
+                </li>
+            </ul><br>
+            <h2>Backend Technologies</h2>
+            <p>Backend technologies used</p>
+            <ul>
+                <li><span class="bold">Weather APIs:</span> Integrates with weather APIs to retrieve weather data, such as OpenWeatherMap or Weatherstack.
+                    <code>
+                        // Example API request using Fetch API
+                        fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY')
+                            .then(response => response.json())
+                            .then(data => {
+                                // Process weather data
+                            })
+                            .catch(error => console.error('Error fetching weather data:', error));
+                    </code>
+                </li>
+                <li><span class="bold">Server-side scripting:</span> Utilized for processing requests and handling API responses.</li>
+            </ul>
+            </div>
+        </section>
+        <section class="main-section" id="features">
+            <header>Features</header>
+            <div class="article">
+                <li><span class="bold">Current Weather Display:</span> Displays the current weather conditions, including temperature, humidity, wind speed, and weather description.
+                    <code>
+                        &lt;div id="current-weather"&gt;
+                            &lt;h2&gt;Current Weather&lt;/h2&gt;
+                            &lt;p&gt;Temperature: &lt;span id="temperature"&gt;&lt;/span&gt;°C&lt;/p&gt;
+                            &lt;p&gt;Humidity: &lt;span id="humidity"&gt;&lt;/span&gt;%&lt;/p&gt;
+                        &lt;/div&gt;
+                    </code>
+                    <code>
+                        // Update current weather display with data from API response
+                        function updateCurrentWeather(data) {
+                            document.getElementById('temperature').textContent = data.main.temp;
+                            document.getElementById('humidity').textContent = data.main.humidity;
+                            // Update additional weather details
+                        }
+                    </code>
+                </li>
+                <li><span class="bold">Hourly Forecast:</span> Provides an hourly forecast for the upcoming hours, showing predicted temperature changes and weather conditions.</li>
+                <li><span class="bold">Extended Forecast:</span> Offers an extended forecast for multiple days, allowing users to plan ahead and prepare for future weather conditions.</li>
+                <li><span class="bold">Location Selection:</span> Enables users to search for and select their desired location to view the weather forecast.</li>
+            </div>
+        </section>
+        <section class="main-section" id="testing_and_validation">
+            <header>Testing and Validation</header>
+            <div class="article">
+                <p>Discusses the testing process conducted to ensure the application's functionality across different browsers and devices.</p>
+                <p>Validates the application's adherence to web standards and best practices.</p>
+            </div>
+        </section>
+        <section class="main-section" id="conclusion">
+            <header>Conclusion</header>
+            <div class="article">
+                <p>Thank you for exploring the Weather Forecast Application Documentation! We hope this document provides valuable insights into the development and functionality of the Weather Forecast Application.</p>
+                <p>Whether you're a developer seeking to understand the implementation details or a user interested in exploring weather forecasts, we appreciate your interest and feedback.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
